@@ -1,0 +1,82 @@
+Method in Java is a block of code (group of java statements).  It defines the behavior of a class.
+
+Why We Should Use Methods:
+*Helps us remove the duplicate code from our applications:
+    We just create a method and every time we need that logic we
+    just call the method that contains that logic.
+*It also allows to write the code in the form of modules which makes the development of large applications easier.
+
+How To Use Methods:
+1)Create the method inside a class
+2)We create the object of that class
+3)We call the method by writing the name of the object a dot name of the method
+
+class Calculator{
+
+void add(int x, int y){
+    System.out.println(x+y);
+
+}
+
+public static void main(String[] args){
+
+Calculator result=new Calculator();
+
+System.out.println(result.add(4,5));
+
+
+}
+
+}
+
+*Rules to create and use methods:*
+void=> void is a return type that is used if nothing is wanted to be returned.
+        We can't assign a method call to a  when void is used. Use void to simply print something
+specific datatypes=> if you want to return integer write int, for String we write String, etc.
+
+add=>next we write the name of the method which can be any name but needs to follow same rules that naming a variable
+     follow. Then parentheses follow which specify the parameters.  We can pass any datatype inside the parentheses.
+     This is optional, parentheses can also be left empty.
+     Then you have the {body of the method which contains Java statements}
+
+    add(int x, int y)=> This part with the name of the method and its parameters is called signature of a method.
+
+    ==================================================================================================================
+    Types of Variables in Java:
+    1)Local
+        *If a variable is inside a method(including its parameters), loop, switch statement, or if else condition,
+         then it is called a local variable. (inside the block of code)
+    2)Instance
+        *If a variable is inside the class but outside any block of code (method, loop, switch statment, if else
+         condition), it is called an instance variable. Accessible in all the blocks of code w/in the class.
+    3)Static
+        *If a variable has a static keyword with it, then it is called a static variable.
+
+    ==>Why You Need to Know Different Types of Variables
+        -It helps reduce the amount of RAM that our applications will be using when it is running.
+        -With the help of these variables we can pass information between methods of class
+            (instance variable could be shared between 2 methods or static variable could be passed
+             across all the methods for example)
+        -Local variables occupy the memory for the shortest period of time.  As soon as your method is done executing
+         they are destroyed by a special program called garbage collector.
+
+    ==>Pros & Cons
+       1)Local
+         *Pros: They occupy memory for shortest period of time, so always try to use local when possible to save memory
+         *Cons: Limited to inside the block of code, so cannot be accessed outside of method, loop, switch, if, etc.
+       2)Instance (object level)
+         *Pros: They have broader scope compared to local, because we can access them in all the methods of that class
+         *Cons: They occupy the space in your RAM for longer periods of time
+       3)Static (class level)
+         *Pros: We can call static variables without creating an object of a class.
+                We can share a single variable between all the objects of a class
+                They have the highest scope available since it is outside an object.
+                Since it is class level variable it does not matter how many objects we
+                create from that class, only 1 variable is created.
+         *Cons: They occupy the memory for longest period of time.
+                They can hold only a single value for all the objects.
+
+                         *To sum up: ALWAYS prefer LOCAL VARIABLES*
+                    *If you know value will STAY THE SAME for all the objects of a class,
+                         we should use STATIC variable to save memory*
+
