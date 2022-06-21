@@ -1,0 +1,47 @@
+==>Constructor:
+    *Constructor is a block of code that is used to construct objects.
+
+==>Why we should use Constructors
+    *Constructor help us initialize objects in cleaner and more readable way
+    *They are better than methods because they are called automatically when we create object.
+    *Most of the time fields(like instance variables) are private, so we can't access them outside the class
+     in which they are declared and can't initialize them.
+
+==>How to use Constructor
+    *We create the constructor by writing a block of code that has the same name as the class name.
+    *When we create the object of that class it is called automatically
+
+==>Rules
+    1)Constructors don't have return types(including void)
+    2)Constructors should have same name as class name.
+    3)Constructors can have access modifiers like private, public, and protected.
+    4)Constructors can't have non-access modifiers like static, final, and synchronized.
+    5)Default constructor is provided by Java if we don't write one. ()
+    6)When we crate the object of a class, then a Constructor is called.
+        Class class1=new Class(); -->Constructor is called there with empty parameters
+                                  -->new keyword creates memory in the heap
+                                  -->Classes act as datatypes as well (such as class1).  Classes are abstract datatypes
+    7)We can create multiple Constructors to give the other users flexibility that they don't have to provide the
+      all the values to all the instance fields whe creating an object of our class.
+    8)We can call the constructor of a class by using this keyword with parenthesis.  this()  -->not very common
+      -->We can pass parameters and java will decide based on these parameters which constructor to call.
+
+==>"this" keyword:
+    *Whenever we have the same name for instance variables and local variables, the "this" keyword can help us
+     resolve the conflict between local and instance variables.
+
+    class Human{
+    String name="sleeping Zombie";
+
+    void printName(){
+        String name="wake up Zombie";
+        System.out.println(name); //prints "wake up zombie"
+        System.out.println(this.name); //prints "sleeping Zombie"
+        }
+    }
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+==>What is inheritance?
+    *Inheritance is a mechanism in Java through which we can get the properties and methods from the parent class
+     inside the child class.
+
+==>Why we should use inheritance:
+    *Inheritance helps us reduce the amount of code that we have to write.
+    For Example-->If there are some properties and methods which are present in many classes,
+    we can create a parent class for all those properties.  Then we can put the common properties or methods
+    inside that parent class and can make children classes extend from that parent class.
+    *It is more efficient and saves memory.
+
+==>How can we use inheritance:
+    1)Create a parent class
+    2)Put all the common methods and properties from children's classes inside that parent class
+    3)Use "extends" keyword to inherit from that parent class
+
+==>Types of Inheritance
+   *Different languages support different types of inheritance but 5 are most common. (Java supports 3)
+    1)Single Inheritance
+    2)Multi-level Inheritance
+    3)Hierarchical Inheritance
+    4)Multiple Inheritance -->not allowed in Java (cannot inherit from 2 parent classes)
+    5)Hybrid Inheritance
+   *Explanations in Slides
+
+==>Inheritance Rules:
+    1)Private fields and private methods cannot be inherited inside the children's classes
+    2)Constructors are not inherited.
+
+
+    class Parent{
+        String name="Newton";
+        String eyeColor="brown";
+    }
+
+    class Child extends Parent{
+    public void printInfo(){
+    System.out.printn(name+"eyeColor");
+    }
+    }
