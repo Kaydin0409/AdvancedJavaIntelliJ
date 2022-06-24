@@ -1,0 +1,33 @@
+==>What is Method Overloading:
+        *When same name method exists but with different number of parameters or different types of parameters or
+         different sequence of parameters it is called Method Overloading.
+
+==>Why We Should Use Method Overloading:
+        *Makes code more readable
+        *Makes the life of the end users easy, so they don't have to memorize many method names.
+        *Cleaner code b/c if multiple methods are doing the same thing, we don't need to have different names
+
+==>How We Can Use Method Overloading:
+        *By passing different number of parameters
+        *We can change the datatype of parameters
+        *We can also overload a method by changing the sequence of parameters
+
+==>Rules:
+        *Method names should be same but parameters must be different
+        *We can't overload a method by just changing its return type
+        *We can also overload constructors by following the same rules of method overloading
+
+class Calculator{
+
+    int sum(int num1, int num2){
+        return num1+num2;
+    }
+    int sum(int num1, int num2, int num3){
+        return num1+num2+num3;
+    }
+
+    int sum(double num1, int num2){
+        return num1+num2;
+    }
+
+}

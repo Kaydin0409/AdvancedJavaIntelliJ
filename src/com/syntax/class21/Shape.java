@@ -19,7 +19,7 @@ class Circle extends Shape{
     }
 
     public double areaOfCircle(){
-        double area=Math.PI*(radius*radius);
+        double area=Math.PI*Math.pow(radius,2);
         return area;
     }
 
